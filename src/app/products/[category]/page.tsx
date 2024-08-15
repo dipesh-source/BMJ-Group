@@ -22,11 +22,10 @@ export const metadata: Metadata = {
 
 // Define the possible category paths to pre-generate
 export async function generateStaticParams() {
-  // Fetch categories from an API, database, or define them manually
-  const categories = ["wine", "beer", "whiskey"]; // Example categories
+  const categories = ["wine", "beer", "whiskey"]; // Static example
 
   return categories.map((category) => ({
-    category, // This matches the dynamic [category] in the route
+    category: category.toLowerCase(), // Ensure consistency
   }));
 }
 
