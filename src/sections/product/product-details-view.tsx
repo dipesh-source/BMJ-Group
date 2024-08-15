@@ -12,80 +12,7 @@ import axiosInstance from "@/utils/axiosInstance";
 import { useRouter } from "next/navigation";
 import { addProductToCart } from "@/redux/slices/purchaseOrdersSlice";
 import showToast from "@/utils/toastService";
-// import { useRouter } from "next/router";
-
-// const Products = [
-//   {
-//     ItemID: "c4a36c7d-92b4-41b9-a176-cddad5936928",
-//     Code: "#1",
-//     Description: "Beer, drink",
-//     img: "https://admin.livingliquidz.com/ImagesUpload/ROCKPAPERRUMTROPICALCOCONUT20241032163.jpg",
-//     PurchaseDescription:
-//       "https://images.pexels.com/photos/2286972/pexels-photo-2286972.jpeg?auto=compress&cs=tinysrgb&w=800, https://images.pexels.com/photos/1694853/pexels-photo-1694853.jpeg?auto=compress&cs=tinysrgb&w=800",
-//     UpdatedDateUTC: "/Date(1722358198927+0000)/",
-//     PurchaseDetails: {
-//       UnitPrice: 10,
-//       COGSAccountCode: "310",
-//       TaxType: "INPUT2",
-//     },
-//     SalesDetails: {
-//       UnitPrice: 12,
-//       AccountCode: "200",
-//       TaxType: "OUTPUT2",
-//     },
-//     Name: "Beer, drink",
-//     IsTrackedAsInventory: true,
-//     InventoryAssetAccountCode: "630",
-//     TotalCostPool: 200,
-//     QuantityOnHand: 20,
-//     IsSold: true,
-//     IsPurchased: true,
-//   },
-//   {
-//     ItemID: "fd778654-c278-4ad7-b21f-72b6eb4ebf59",
-//     Code: "#2",
-//     Description: "Vodka, Absolute",
-//     PurchaseDescription: "Vodka, Absolute",
-//     UpdatedDateUTC: "/Date(1720845422373+0000)/",
-//     img: "https://admin.livingliquidz.com/img/MD/AMRUT-TWO-INDIES-WHITE-RUM-2953.jpg",
-//     PurchaseDetails: {
-//       UnitPrice: 34,
-//       AccountCode: "320",
-//       TaxType: "NONE",
-//     },
-//     SalesDetails: {
-//       UnitPrice: 500,
-//       AccountCode: "260",
-//       TaxType: "OUTPUT2",
-//     },
-//     Name: "Vodka, Absolute",
-//     IsTrackedAsInventory: false,
-//     IsSold: true,
-//     IsPurchased: true,
-//   },
-//   {
-//     ItemID: "779da130-ebe5-427b-a119-fb471dd92a40",
-//     Code: "#3",
-//     Description: "Beer, soft-drink",
-//     PurchaseDescription: "Beer, soft-drink",
-//     UpdatedDateUTC: "/Date(1720853490100+0000)/",
-//     PurchaseDetails: {
-//       UnitPrice: 20,
-//       AccountCode: "320",
-//       TaxType: "NONE",
-//     },
-//     SalesDetails: {
-//       UnitPrice: 300,
-//       AccountCode: "200",
-//       TaxType: "OUTPUT2",
-//     },
-//     Name: "Beer, soft-drink",
-//     IsTrackedAsInventory: false,
-//     IsSold: true,
-//     IsPurchased: true,
-//     img: "https://admin.livingliquidz.com/img/MD/BACARDI-CARTA-BLANCA-845.jpg",
-//   },
-// ];
+import Image from 'next/image';
 
 export default function ProductDetailsView({ productData }: any) {
   const router = useRouter();
@@ -131,10 +58,13 @@ export default function ProductDetailsView({ productData }: any) {
             <div className="lg:flex lg:items-start">
               <div className="lg:order-2 lg:ml-5 h-full w-full border rounded-lg py-5">
                 <div className="h-full overflow-hidden p-10">
-                  <img
+                  <Image
                     className="h-96 mx-auto max-w-full object-cover"
                     src={PurchaseDescription?.split(",")?.[0]}
-                    alt=""
+                    alt={Name?.split(",")?.[0]}
+                    width={500} // Adjust width based on your requirements
+                    height={500} // Adjust height based on your requirements
+                    layout="responsive" // Ensure responsive loading
                   />
                 </div>
               </div>

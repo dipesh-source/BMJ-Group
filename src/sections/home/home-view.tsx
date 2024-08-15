@@ -10,13 +10,7 @@ import { fetchContacts } from "@/redux/slices/ContactsSlice";
 import AccessDeniedModal from "@/componnets/AccessDeniedModal/AccessDeniedModal";
 import AgeVerificationModal from "@/componnets/AgeVerificationModal/AgeVerificationModal";
 import GetContactDetailModel from "@/componnets/GetContactDetailModel/GetContactDetailModel";
-import products from "@/utils/productData";
-
-interface Category {
-  id: number;
-  title: string;
-  img: string;
-}
+import Image from 'next/image';
 
 const HomeView: React.FC = () => {
   const router = useRouter();
@@ -54,7 +48,7 @@ const HomeView: React.FC = () => {
         }
       });
     }
-  }, [isAgeVerified]);
+  }, [isAgeVerified, dispatch]);
 
   useEffect(() => {
     const ageVerificationStatus = getCookie("ageVerified");
@@ -147,9 +141,12 @@ const HomeView: React.FC = () => {
             <div className="col-span-8">
               <div className="border-l p-3">
                 <div className="h-52">
-                  <img
+                  <Image
                     src="https://liquorworld.com.np/wp-content/uploads/2023/05/Liquor-World-Banner-Slider-1.jpg"
-                    className="w-full h-full"
+                    alt="Banner"
+                    width={1000}
+                    height={500}
+                    layout="responsive"
                   />
                 </div>
                 <div className="grid grid-cols-12 gap-5 py-10">
@@ -177,9 +174,13 @@ const HomeView: React.FC = () => {
                         className="border p-2 hover:border-2 hover:border-blue-700 text-center rounded-lg cursor-pointer"
                       >
                         <div className="h-50 overflow-hidden">
-                          <img
+                          <Image
                             className="rounded-lg"
                             src={item?.PurchaseDescription?.split(",")?.[1]}
+                            alt="Product Image"
+                            width={500}
+                            height={300}
+                            layout="responsive"
                           />
                         </div>
                         <p className="text-blue-700 mt-2">
