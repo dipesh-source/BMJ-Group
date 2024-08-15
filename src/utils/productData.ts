@@ -1,0 +1,98 @@
+const products = {
+  Id: "db9ee189-09b6-4c47-bfbd-33bb8579345c",
+  Status: "OK",
+  ProviderName: "BMJ Group",
+  DateTimeUTC: "/Date(1722537739400)/",
+  Items: [
+    {
+      ItemID: "c4a36c7d-92b4-41b9-a176-cddad5936928",
+      Code: "#1",
+      Description: "Beer, drink",
+      PurchaseDescription:
+        "https://images.pexels.com/photos/2286972/pexels-photo-2286972.jpeg?auto=compress&cs=tinysrgb&w=800, https://images.pexels.com/photos/1694853/pexels-photo-1694853.jpeg?auto=compress&cs=tinysrgb&w=800",
+      UpdatedDateUTC: "/Date(1722358198927+0000)/",
+      PurchaseDetails: {
+        UnitPrice: 10,
+        COGSAccountCode: "310",
+        TaxType: "INPUT2",
+      },
+      SalesDetails: {
+        UnitPrice: 12,
+        AccountCode: "200",
+        TaxType: "OUTPUT2",
+      },
+      Name: "Beer, drink",
+      IsTrackedAsInventory: true,
+      InventoryAssetAccountCode: "630",
+      TotalCostPool: 200,
+      QuantityOnHand: 20,
+      IsSold: true,
+      IsPurchased: true,
+    },
+    {
+      ItemID: "fd778654-c278-4ad7-b21f-72b6eb4ebf59",
+      Code: "#2",
+      Description: "Vodka, Absolute",
+      PurchaseDescription: "Vodka, Absolute",
+      UpdatedDateUTC: "/Date(1720845422373+0000)/",
+      PurchaseDetails: {
+        UnitPrice: 34,
+        AccountCode: "320",
+        TaxType: "NONE",
+      },
+      SalesDetails: {
+        UnitPrice: 500,
+        AccountCode: "260",
+        TaxType: "OUTPUT2",
+      },
+      Name: "Vodka, Absolute",
+      IsTrackedAsInventory: false,
+      IsSold: true,
+      IsPurchased: true,
+    },
+    {
+      ItemID: "779da130-ebe5-427b-a119-fb471dd92a40",
+      Code: "#3",
+      Description: "Beer, soft-drink",
+      PurchaseDescription: "Beer, soft-drink",
+      UpdatedDateUTC: "/Date(1720853490100+0000)/",
+      PurchaseDetails: {
+        UnitPrice: 20,
+        AccountCode: "320",
+        TaxType: "NONE",
+      },
+      SalesDetails: {
+        UnitPrice: 300,
+        AccountCode: "200",
+        TaxType: "OUTPUT2",
+      },
+      Name: "Beer, soft-drink",
+      IsTrackedAsInventory: false,
+      IsSold: true,
+      IsPurchased: true,
+    },
+    {
+      ItemID: "4579e2d2-5311-455b-8da6-87e8a3e6fc1b",
+      Code: "#4",
+      Description: "all thing are getting done as of now",
+      PurchaseDescription: "here are some description",
+      UpdatedDateUTC: "/Date(1721748109517+0000)/",
+      PurchaseDetails: {
+        UnitPrice: 899,
+        AccountCode: "200",
+        TaxType: "OUTPUT2",
+      },
+      SalesDetails: {
+        UnitPrice: 322,
+        AccountCode: "200",
+        TaxType: "OUTPUT2",
+      },
+      Name: "Absoute, new",
+      IsTrackedAsInventory: false,
+      IsSold: true,
+      IsPurchased: true,
+    },
+  ],
+};
+
+export default products;

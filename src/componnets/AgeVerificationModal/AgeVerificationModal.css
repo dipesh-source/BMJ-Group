@@ -1,0 +1,96 @@
+.age-verification-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure the modal is above other content */
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  padding-top: 40px;
+  border-radius: 5px;
+  text-align: center;
+  color: black; /* Set the text color to black */
+  font-family: Arial, sans-serif; /* Set the font family */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items horizontally */
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+  letter-spacing: 0.03em; /* Add letter spacing */
+}
+
+.modal-content p {
+  margin-bottom: 10px;
+  font-size: 14px; /* Set the font size for p */
+  line-height: 1.5;
+  color: rgb(114, 121, 134);
+  letter-spacing: 0.03em; /* Add letter spacing */
+}
+
+.modal-content .link {
+  color: blue;
+  text-decoration: none;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.modal-content .link:hover {
+  text-decoration: underline;
+}
+
+.modal-content .space {
+  margin: 0 5px;
+}
+
+.modal-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-actions button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: black;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  max-width: calc(50% - 20px); /* Max width 50% of modal minus padding */
+  margin: 0 10px; /* Adjust margin for spacing */
+}
+
+.modal-actions .continue-button {
+  background-color: blue;
+  color: white;
+}
+
+.modal-actions button:hover {
+  background-color: #e0e0e0;
+}
+
+.modal-actions .continue-button:hover {
+  background-color: darkblue;
+}
+
+.footer-text {
+  margin-top: 20px;
+  font-size: 14px; /* Increase font size to 14px */
+  color: black; /* Set text color to black */
+  letter-spacing: 0.03em;
+}
